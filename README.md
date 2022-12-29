@@ -1,9 +1,13 @@
 # suckless-configs
 
 # Core dependencies
+
+### On Fedora use the following command to install all the dependencies in one go
 ```
-function test() {
-  console.log("notice the blank line before this function?");
-}
+sudo dnf install feh make 
 ```
 
+### Pywal:
+```
+pip3 install pywal
+```
