@@ -1,3 +1,3 @@
 #!/bin/bash
 
-feh --bg-fill $HOME/Downloads/wallhaven-9mjoy1_1920x1080.png
+feh --bg-fill $HOME/Downloads/wallhaven-l8338q_1920x1080.png
