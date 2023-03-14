@@ -1,0 +1,235 @@
+@import url("https://fonts.cdnfonts.com/css/satoshi");
+
+/* Light mode */
+:root {
+  --body-bg: #E2FCFC;
+  --body-color: #0e1010;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --body-bg: #0e1010;
+    --body-color: #E2FCFC;
+    --isDark: invert(100%);
+  }
+}
+
+.dark-mode {
+  --body-bg: #22181c;
+  --body-color: #f6e8ea;
+  --isDark: filter: invert(95%) sepia(12%) saturate(567%) hue-rotate(157deg) brightness(104%) contrast(98%);;
+}
+
+body {
+  background-color: var(--body-bg);
+  color: var(--body-color);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  font-size: 18px;
+  font-family: "Satoshi", sans-serif;
+  font-weight: 900;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 7.5%;
+}
+
+.decimino {
+  clip-path: circle();
+  max-width: 140px;
+  width: 140px;
+  min-width: 140px;
+  height: 140px;
+  object-fit: cover;
+}
+
+.decimino:hover {
+  filter: grayscale(60%);
+  transition: 0.3s ease;
+}
+
+.albumCover {
+  clip-path: polygon(4);
+  width: clamp(100% - 6pt, 10vw, 240px);
+  height: clamp(240px, 10vw, 240px);
+  object-fit: cover;
+  border-radius: 16px;
+  margin: 6pt;
+}
+
+.piede {
+  opacity: 90%;
+  font-weight: 800;
+  font-size: clamp(8px, 8vw, 16px);
+  color: var(--body-bg);
+}
+
+main {
+  flex-grow: 1;
+}
+
+main > article {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr 1fr;
+}
+
+main > article > .article-section {
+  height: 100%;
+  border: 1px solid var(--body-bg);
+}
+
+.albumTitle {
+  padding-top: 10px;
+  padding-left: 16px;
+  font-weight: 900;
+  font-style: oblique;
+  font-size: clamp(8px, 8vw, 48px);
+}
+
+.albumInfo {
+  opacity: 80%;
+  font-weight: 800;
+  font-size: clamp(8px, 8vw, 18px);
+  padding-left: 16px;
+}
+
+footer {
+  margin-top: 15px;
+  display: flex;
+  font-size: 18px;
+  font-family: "Satoshi", sans-serif;
+  font-weight: 700;
+  padding: 30px 7.5%;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--body-color);
+  color: var(--body-bg);
+}
+
+.sborra {
+  padding: 0px 7.5%;
+  color: var(--body-color);
+}
+
+.links {
+  display: inline-block;
+  list-style: none;
+  padding: 0 15px;
+}
+
+.links li,
+a {
+  text-decoration: none;
+  color: var(--body-color);
+}
+
+.links a:hover,
+i:hover {
+  transition: 0.3s ease;
+}
+
+nav li:hover {
+  scale: 120%;
+  transition: 0.2s ease;
+}
+
+nav li::after {
+  scale: 100%;
+  transition: 0.2s ease-in-out;
+}
+
+.decimese a {
+  font-family: "Satoshi";
+  font-weight: 700;
+  font-size: clamp(45px, 8vw, 110px);
+}
+
+p {
+  font-family: "Satoshi";
+  font-weight: 700;
+  font-size: clamp(60px, 8vw, 110px);
+}
+
+.decimese a:hover {
+  color: #ef626c;
+  transition: ease-in-out;
+  transition-duration: 0.3s ease;
+  cursor: default;
+}
+
+
+/*SELECTION COLORS*/
+::-moz-selection {
+  /* Code for Firefox */
+  color: var(--body-bg);;
+  background: var(--body-color);
+}
+
+::selection {
+  color: var(--body-bg);;
+  background: var(--body-color);
+}
+
+.logos {
+  max-width: clamp(32px, 10vw, 80px);
+  filter: var(--isDark);
+}
+
+.culone {
+  margin: 10px;
+  scale: 100%;
+  font-family: "Satoshi";
+  font-weight: 700;
+  background-color: var(--body-color);
+  color: var(--body-bg);
+  padding: 15px 20px;
+  stroke: none;
+  border: none;
+  font-size: 24px;
+  border-radius: 16px;
+}
+
+.culone:hover {
+  font-family: "Satoshi";
+  font-weight: 700;
+  background-color: var(--body-color);
+  border: none;
+  color: var(--body-bg);
+  padding: 15px 20px;
+  font-size: 24px;
+  /*filter: invert();*/
+  opacity: 80%;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.culone:active {
+  scale: 90%;
+  transition: 0.3s ease;
+}
+
+.albumCover:hover {
+  opacity: 90%;
+  transition: 0.3s ease;
+}
+
+.albumCover:active {
+  scale: 90%;
+  transition: 0.3s ease;
+}
+
+@media (max-width: 780px) {
+  nav {
+    visibility: hidden;
+  }
+
+}
